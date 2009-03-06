@@ -1,0 +1,5 @@
+Just a small project that will be worked on once ARL rolls out.
+
+Will allow you to play sequences of boss encounters on demand using the in-game files.
+
+ie: It'll let me easily play the Rag speech whenever I want.
