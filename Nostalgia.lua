@@ -150,9 +150,22 @@ end
 ]]--
 
 -- Description: Plays the specified boss, and their specific sounds
-
+--/script Nostalgia:PlayBoss("YoggSaron",1)
 function addon:PlayBoss(bossname, bosstype)
 
-	
+	-- No boss in the database
+	if (not soundlist[bossname]) then
+		self:Print("Boss not found.")
+	-- Boss in the database but we didn't specify a type
+	elseif (not bosstype) then
+
+	-- Boss in the database and we only want to play a specific type
+	else
+		-- Scan all the sounds
+		for i in pairs(soundlist[bossname][bosstype]) do
+			local soundpath = cpath .. bossname .. "\\" .. i
+			PlaySoundFile(soundpath)
+		end
+	end
 
 end
