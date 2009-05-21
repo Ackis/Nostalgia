@@ -36,35 +36,58 @@ end
 local L			= LibStub("AceLocale-3.0"):GetLocale(MODNAME)
 
 -- Data structure containing all the sound files for boss encounters
+-- Bossname[Soundtype][Soundfile]
+-- Soundtype list:
+--		1 - Random shouts throughout the instance
+--		2 - Random shouts during the fight
+--		3 - Shouts on a players death
+--		4 - Pre-fight speech
+--		5 - Phase chage speech
+--		6 - Post-fight speech
+
 local soundlist = {
 	["YoggSaron"] = {
-		[1] = "UR_FemaleYogg_Prefight01.wav",
-		[2] = "UR_FemaleYogg_Prefight02.wav",
-		[3] = "UR_FemaleYogg_Aggro01.wav",
-		[4] = "UR_FemaleYogg_Help01.wav",
-		[5] = "UR_FemaleYogg_Help02.wav",
-		[6] = "UR_FemaleYogg_Insanity01.wav",
-		[7] = "UR_FemaleYogg_Prefight01.wav",
-		[8] = "UR_FemaleYogg_Prefight02.wav",
-		[9] = "UR_FemaleYogg_Slay01.wav",
-		[10] = "UR_FemaleYogg_Slay02.wav",
-		[11] = "UR_FemaleYogg_Special01.wav",
-		[12] = "UR_FemaleYogg_Special02.wav",
-		[13] = "UR_YoggSaron_PhaseTwo01.wav",
-		[14] = "UR_YoggSaron_PhaseThree01.wav",
-		[15] = "UR_YoggSaron_Death01.wav",
-		[16] = "UR_YoggSaron_Insanity01.wav",
-		[17] = "UR_YoggSaron_Insanity02.wav",
-		[18] = "UR_YoggSaron_Slay01.wav",
-		[19] = "UR_YoggSaron_Slay02.wav",
-		[20] = "UR_YoggSaron_Tentacle01.wav",
-		[21] = "UR_YoggSaron_YSVisOne01.wav",
-		[22] = "UR_YoggSaron_YSVisOne02.wav",
-		[23] = "UR_YoggSaron_YSVisOne03.wav",
-		[24] = "UR_YoggSaron_YSVisThree01.wav",
-		[25] = "UR_YoggSaron_YSVisThree02.wav",
-		[26] = "UR_YoggSaron_YSVisTwo03.wav",
+		[1] = {
+			[1] = "UR_FemaleYogg_Prefight01.wav",
+			[2] = "UR_FemaleYogg_Prefight02.wav",
 		},
+		[2] = {
+		},
+		[3] = {
+		},
+		[4] = {
+			[1] = "UR_FemaleYogg_Prefight01.wav",
+			[2] = "UR_FemaleYogg_Prefight02.wav",
+			[3] = "UR_FemaleYogg_Aggro01.wav",
+			[4] = "UR_FemaleYogg_Help01.wav",
+			[5] = "UR_FemaleYogg_Help02.wav",
+			[6] = "UR_FemaleYogg_Insanity01.wav",
+			[7] = "UR_FemaleYogg_Prefight01.wav",
+			[8] = "UR_FemaleYogg_Prefight02.wav",
+			[9] = "UR_FemaleYogg_Slay01.wav",
+			[10] = "UR_FemaleYogg_Slay02.wav",
+			[11] = "UR_FemaleYogg_Special01.wav",
+			[12] = "UR_FemaleYogg_Special02.wav",
+			[13] = "UR_YoggSaron_PhaseTwo01.wav",
+			[14] = "UR_YoggSaron_PhaseThree01.wav",
+			[15] = "UR_YoggSaron_Death01.wav",
+			[16] = "UR_YoggSaron_Insanity01.wav",
+			[17] = "UR_YoggSaron_Insanity02.wav",
+			[18] = "UR_YoggSaron_Slay01.wav",
+			[19] = "UR_YoggSaron_Slay02.wav",
+			[20] = "UR_YoggSaron_Tentacle01.wav",
+			[21] = "UR_YoggSaron_YSVisOne01.wav",
+			[22] = "UR_YoggSaron_YSVisOne02.wav",
+			[23] = "UR_YoggSaron_YSVisOne03.wav",
+			[24] = "UR_YoggSaron_YSVisThree01.wav",
+			[25] = "UR_YoggSaron_YSVisThree02.wav",
+			[26] = "UR_YoggSaron_YSVisTwo03.wav",
+		},
+		[5] = {
+		},
+		[6] = {
+		},
+	},
 }
 
 --[[
@@ -117,5 +140,19 @@ end
 -- Description: 
 
 function addon:ChatCommand(input)
+
+end
+
+--[[
+
+	Functionality
+
+]]--
+
+-- Description: Plays the specified boss, and their specific sounds
+
+function addon:PlayBoss(bossname, bosstype)
+
+	
 
 end
