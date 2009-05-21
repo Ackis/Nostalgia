@@ -20,6 +20,10 @@ local MODNAME	= "Nostalgia"
 
 local addon		= LibStub("AceAddon-3.0"):GetAddon(Nostalgia)
 
+local PlaySoundFile = PlaySoundFile
+
+local cpath = "Sound\\Creature\\"
+
 if (not LibStub:GetLibrary("AceLocale-3.0", true)) then
 	addon:Print(format("%s is missing.  Addon cannot run.","AceLocale-3.0"))
 	--@debug@
@@ -30,6 +34,38 @@ if (not LibStub:GetLibrary("AceLocale-3.0", true)) then
 end
 
 local L			= LibStub("AceLocale-3.0"):GetLocale(MODNAME)
+
+-- Data structure containing all the sound files for boss encounters
+local soundlist = {
+	["YoggSaron"] = {
+		[1] = "UR_FemaleYogg_Prefight01.wav",
+		[2] = "UR_FemaleYogg_Prefight02.wav",
+		[3] = "UR_FemaleYogg_Aggro01.wav",
+		[4] = "UR_FemaleYogg_Help01.wav",
+		[5] = "UR_FemaleYogg_Help02.wav",
+		[6] = "UR_FemaleYogg_Insanity01.wav",
+		[7] = "UR_FemaleYogg_Prefight01.wav",
+		[8] = "UR_FemaleYogg_Prefight02.wav",
+		[9] = "UR_FemaleYogg_Slay01.wav",
+		[10] = "UR_FemaleYogg_Slay02.wav",
+		[11] = "UR_FemaleYogg_Special01.wav",
+		[12] = "UR_FemaleYogg_Special02.wav",
+		[13] = "UR_YoggSaron_PhaseTwo01.wav",
+		[14] = "UR_YoggSaron_PhaseThree01.wav",
+		[15] = "UR_YoggSaron_Death01.wav",
+		[16] = "UR_YoggSaron_Insanity01.wav",
+		[17] = "UR_YoggSaron_Insanity02.wav",
+		[18] = "UR_YoggSaron_Slay01.wav",
+		[19] = "UR_YoggSaron_Slay02.wav",
+		[20] = "UR_YoggSaron_Tentacle01.wav",
+		[21] = "UR_YoggSaron_YSVisOne01.wav",
+		[22] = "UR_YoggSaron_YSVisOne02.wav",
+		[23] = "UR_YoggSaron_YSVisOne03.wav",
+		[24] = "UR_YoggSaron_YSVisThree01.wav",
+		[25] = "UR_YoggSaron_YSVisThree02.wav",
+		[26] = "UR_YoggSaron_YSVisTwo03.wav",
+		},
+}
 
 --[[
 
