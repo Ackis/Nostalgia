@@ -5,19 +5,9 @@
 Nostalgia.lua
 
 File date: @file-date-iso@ 
-File revision: @file-revision@ 
-Project revision: @project-revision@
 Project version: @project-version@
 
 Author: Ackis
-
-************************************************************************
-
-License:
-	Please see LICENSE.txt
-
-Documentation:
-	Please see Docs\Documentation.txt for comprehensive documentation.
 
 ************************************************************************
 
@@ -48,9 +38,6 @@ local L			= LibStub("AceLocale-3.0"):GetLocale(MODNAME)
 ]]--
 
 -- Description: 
--- Expected result:
--- Input: None
--- Output: None
 
 function addon:OnInitialize()
 
@@ -73,9 +60,6 @@ function addon:OnInitialize()
 end
 
 -- Description:
--- Expected result:
--- Input: None
--- Output: None
 
 function addon:OnEnable()
 
@@ -83,9 +67,6 @@ function addon:OnEnable()
 end
 
 -- Description:
--- Expected result:
--- Input: None
--- Output: None
 
 function addon:OnDisable()
 
@@ -98,9 +79,6 @@ end
 ]]--
 
 -- Description: 
--- Expected result: 
--- Input: None
--- Output: None
 
 function addon:ChatCommand(input)
 
