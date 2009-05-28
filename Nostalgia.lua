@@ -14,15 +14,18 @@ Author: Ackis
 --]]
 
 
-Nostalgia = LibStub("AceAddon-3.0"):NewAddon("Nostalgia", "AceConsole-3.0", "AceEvent-3.0")
+local LibStub = LibStub
 
-local MODNAME	= "Nostalgia"
+local MODNAME = "Nostalgia"
 
-local addon		= LibStub("AceAddon-3.0"):GetAddon(Nostalgia)
+Nostalgia = LibStub("AceAddon-3.0"):NewAddon(MODNAME, "AceConsole-3.0", "AceEvent-3.0")
+
+local addon	= LibStub("AceAddon-3.0"):GetAddon(MODNAME)
 
 local PlaySoundFile = PlaySoundFile
 
 local cpath = "Sound\\Creature\\"
+--[[
 
 if (not LibStub:GetLibrary("AceLocale-3.0", true)) then
 	addon:Print(format("%s is missing.  Addon cannot run.","AceLocale-3.0"))
@@ -34,6 +37,8 @@ if (not LibStub:GetLibrary("AceLocale-3.0", true)) then
 end
 
 local L			= LibStub("AceLocale-3.0"):GetLocale(MODNAME)
+
+]]--
 
 -- Data structure containing all the sound files for boss encounters
 -- Bossname[Soundtype][Soundfile]
